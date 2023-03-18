@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 10;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+  height: 40px;
+  /* margin-top: 4px; */
+  overflow: hidden;
+}
+
+.goog-te-gadget .goog-te-combo {
+  /* color: #000 !important; */
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  /* padding: 8px 4px; */
+}
+
+.goog-te-combo {
+  /* height: 26px; */
+  font-size: 15px;
+  margin-top: 4px !important;
+  padding: 7px 6px;
+  font-weight: 500;
+  color: green !important;
+  border: 1px solid green !important;
+  outline: none;
+}
+
+.goog-te-combo:hover {
+  cursor: pointer;
+}
+
+/* 
+#google_element {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0%;
+  height: 2vh;
+  width: 2vw;
+  border-radius: 50%;
+} */
+
+::-webkit-scrollbar {
+  display: none;
+}
