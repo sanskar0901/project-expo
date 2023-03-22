@@ -16,7 +16,7 @@ function Navbar() {
     <div className=" fixed w-[100vw] flex align-center justify-center z-20 bg-[#57AC4990]">
       <nav
         className={clsx(
-          "flex items-center justify-between flex-wrap p-6  rounded-sm w-[100vw]  ",
+          "flex items-center justify-between flex-wrap p-4  rounded-sm w-[100vw]  ",
           {
             "bg-transparent": !scroll,
           }
@@ -36,6 +36,9 @@ function Navbar() {
           </a>
           <a href={"/anouncement"} className="font-semibold text-xl tracking-tight">
             Anouncements
+          </a>
+          <a href={"/voice"} className="font-semibold text-xl tracking-tight">
+            Assistant
           </a>
         </div>
         <div className="flex items-between  gap-2 text-white mr-6">

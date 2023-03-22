@@ -16,7 +16,7 @@ import Voice from "../Voice/Voice.component";
 function HomeComponent() {
   return (
     <div>
-      {/* <Voice /> */}
+
       <Navbar className="fixed" />
       <div
         className=" w-[100vw] h-[100vh] bg-no-repeat bg-center"

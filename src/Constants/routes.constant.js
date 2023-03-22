@@ -11,6 +11,7 @@ import NewComponent from "../Components/Forum/New.Component";
 import Single from "../Components/Forum/Single.Component";
 import FertilizerComp from "../Components/Local/Fertilizer.component";
 import DiseaseComp from "../Components/DiseasePredition/DiseaseComp";
+import Voice from "../Components/Voice/Voice.component";
 export const PRIVATE_ROUTES = [];
 export const PUBLIC_ROUTES = [
   {
@@ -54,7 +55,7 @@ export const PUBLIC_ROUTES = [
     component: <SignupPage />,
   },
   {
-    path: "/razorpay",
-    component: <Razorpay />,
+    path: "/voice",
+    component: <Voice />,
   },
 ];
