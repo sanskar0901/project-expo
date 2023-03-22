@@ -49,7 +49,7 @@ const Locationcomponent = () => {
 
   return (
     <div className="w-full flex-col">
-      <Navbar />
+      <Navbar className=' bg-[#57AC49]' />
       <div
         className="w-[99vw] relative h-[98vh]  ml-2 rounded-3xl"
         style={{

@@ -13,31 +13,30 @@ function Navbar() {
     // window.scrollY > 0 ? setScroll(true) : setScroll(false);
   }, []);
   return (
-    <div className=" fixed w-[100vw] flex align-center justify-center z-20">
+    <div className=" fixed w-[100vw] flex align-center justify-center z-20 bg-[#57AC4990]">
       <nav
         className={clsx(
-          "flex items-center justify-between flex-wrap p-6  rounded-sm w-[100vw] ",
+          "flex items-center justify-between flex-wrap p-6  rounded-sm w-[100vw]  ",
           {
-            "bg-[#57AC4990] backdrop-blur-sm": scroll,
             "bg-transparent": !scroll,
           }
         )}
       >
         <img src={logo} alt="logo" />
 
-        <div className="flex items-center flex-shrink-0 text-white mr-6 gap-8">
-          {/* <a href={"/"} className="font-semibold text-xl tracking-tight">
-            Home
+        <div className="flex items-center flex-shrink-0 text-black mr-6 gap-8">
+          <a href={"/disease"} className="font-semibold text-xl tracking-tight">
+            Disease
+          </a>
+          <a href={"/crop"} className="font-semibold text-xl tracking-tight">
+            Crop
+          </a>
+          <a href={"/"} className="font-semibold text-xl tracking-tight">
+            Fertilizer
           </a>
           <a href={"/"} className="font-semibold text-xl tracking-tight">
             Home
           </a>
-          <a href={"/"} className="font-semibold text-xl tracking-tight">
-            Home
-          </a>
-          <a href={"/"} className="font-semibold text-xl tracking-tight">
-            Home
-          </a> */}
         </div>
         <div className="flex items-between  gap-2 text-white mr-6">
           <div

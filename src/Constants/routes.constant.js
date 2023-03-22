@@ -10,6 +10,7 @@ import ForumPage from "../Pages/Forum.page";
 import NewComponent from "../Components/Forum/New.Component";
 import Single from "../Components/Forum/Single.Component";
 import FertilizerComp from "../Components/Local/Fertilizer.component";
+import DiseaseComp from "../Components/DiseasePredition/DiseaseComp";
 export const PRIVATE_ROUTES = [];
 export const PUBLIC_ROUTES = [
   {
@@ -39,6 +40,10 @@ export const PUBLIC_ROUTES = [
   {
     path: "/Fertilizer",
     component: <FertilizerComp />,
+  },
+  {
+    path: "/disease",
+    component: <DiseaseComp />,
   },
   {
     path: "/login",
