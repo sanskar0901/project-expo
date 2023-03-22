@@ -31,11 +31,11 @@ function Navbar() {
           <a href={"/crop"} className="font-semibold text-xl tracking-tight">
             Crop
           </a>
-          <a href={"/"} className="font-semibold text-xl tracking-tight">
+          <a href={"/fertilizer"} className="font-semibold text-xl tracking-tight">
             Fertilizer
           </a>
-          <a href={"/"} className="font-semibold text-xl tracking-tight">
-            Home
+          <a href={"/anouncement"} className="font-semibold text-xl tracking-tight">
+            Anouncements
           </a>
         </div>
         <div className="flex items-between  gap-2 text-white mr-6">

@@ -38,7 +38,7 @@ export const PUBLIC_ROUTES = [
     component: <Locationpage />,
   },
   {
-    path: "/Fertilizer",
+    path: "/fertilizer",
     component: <FertilizerComp />,
   },
   {
