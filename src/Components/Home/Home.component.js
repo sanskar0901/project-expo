@@ -44,7 +44,7 @@ function HomeComponent() {
               <Link to="/crop" className=" hover:scale-110">
                 <img src={FYC} alt="" />
               </Link>
-              <Link to="/localcrop" className=" hover:scale-110">
+              <Link to="/Fertilizer" className=" hover:scale-110">
                 <img src={ILC} alt="" />
               </Link>
               <Link to="/razorpay" className=" hover:scale-110">

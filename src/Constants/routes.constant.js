@@ -9,7 +9,7 @@ import AnouncementPage from "../Pages/Anouncement.page";
 import ForumPage from "../Pages/Forum.page";
 import NewComponent from "../Components/Forum/New.Component";
 import Single from "../Components/Forum/Single.Component";
-import Localcropcomponent from "../Components/Local/Localcrop.component";
+import FertilizerComp from "../Components/Local/Fertilizer.component";
 export const PRIVATE_ROUTES = [];
 export const PUBLIC_ROUTES = [
   {
@@ -37,8 +37,8 @@ export const PUBLIC_ROUTES = [
     component: <Locationpage />,
   },
   {
-    path: "/localcrop",
-    component: <Localcropcomponent />,
+    path: "/Fertilizer",
+    component: <FertilizerComp />,
   },
   {
     path: "/login",

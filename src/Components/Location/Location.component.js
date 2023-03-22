@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import SingleCrop from "./SingleCrop.component";
 import loc from "../../Assets/location.svg";
 import Navbar from "../Home/Navbar";
+
+import { useNavigate } from "react-router";
 import lat from "../../Assets/lat.svg";
 import long from "../../Assets/long.svg";
 import city from "../../Assets/city.svg";
@@ -25,6 +27,8 @@ const Locationcomponent = () => {
   const [ph, setPh] = useState("");
   const [rain, setRain] = useState("");
   const [crop, setCrop] = useState("");
+
+  const navigate = useNavigate();
 
   const checkCrop = async () => {
     const res = await axios.post(`${API_URI}/croppredict`, {
@@ -159,24 +163,35 @@ const Locationcomponent = () => {
                 ></input>
               </div> */}
             </div>
-            <div
-              className="basis-[30%] rounded-xl h-[37vh] w-[30%] flex flex-col drop-shadow-xl shadow-md p-5"
-              style={{
-                background: `url(${food})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            >
-              <img src={winner} className="max-w-[50%] mx-auto -mb-5 z-[1]" />
-              <div className="bg-white w-[90%] mx-auto h-[22vh] flex flex-col gap-y-2">
-                <p className="text-xl text-black font-black mt-5">
-                  Crop Production:<br />
-                  <p className="text-3xl text-[#57AC49] font-black">
-                    {crop}
-                  </p>
-                </p>
+            <div className=" flex flex-col gap-2 items-center h-[40vh]">
+              <div className="flex flex-row place-items-center gap-x-4">
+                {/* <img src={long}></img> */}
+                <button
+                  onClick={(e) => { e.preventDefault(); navigate("/fertilizer") }}
 
+                  className="px-4 py-3 rounded-lg border-2 bg-[#57AC49] w-[20vw]  text-white text-lg font-bold font-ss"
+                >Check Fertilizer</button>
+              </div>
+
+              <div
+                className="basis-[30%] rounded-xl h-[37vh] w-[25vw] flex flex-col drop-shadow-xl shadow-md p-5"
+                style={{
+                  background: `url(${food})`,
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              >
+                <img src={winner} className="max-w-[50%] mx-auto -mb-5 z-[1]" />
+                <div className="bg-white w-[90%] mx-auto h-[22vh] flex flex-col gap-y-2">
+                  <p className="text-xl text-black font-black mt-5">
+                    Recommanded Crop:<br />
+                    <p className="text-3xl text-[#57AC49] font-black">
+                      {crop}
+                    </p>
+                  </p>
+
+                </div>
               </div>
             </div>
           </div>
