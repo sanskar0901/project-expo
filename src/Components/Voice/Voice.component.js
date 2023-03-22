@@ -99,7 +99,7 @@ const Voice = () => {
                                 <select className="w-[10vw] h-[6vh] bg-white rounded-lg border-2 border-gray-300 focus:outline-none focus:border-[green] text-base px-4 py-2 resize-none leading-6 transition-colors duration-200 ease-in-out" onChange={(e) => { setLang(e.target.value); }}>
                                     <option value="english">English</option>
                                     <option value="hindi">Hindi</option>
-                                    <option value="marathi">Tamil</option>
+                                    <option value="tamil">Tamil</option>
                                 </select>
                                 <GiSpeaker className=" text-[4vw] text-[green] bg-white rounded-full hover:cursor-pointer" onClick={(e) => { e.preventDefault(); speak(); }} />
                             </div>
