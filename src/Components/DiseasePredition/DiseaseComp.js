@@ -513,76 +513,68 @@ function DiseaseComp() {
 
     return (
         <div>
-
-
             <Navbar />
-            <div className=' w-[98vw] h-[98vh] mx-[1vw] flex justify-between' >
-
-                <form onSubmit={handleSubmit} className="flex h-[77vh] bg-[#57AC49] rounded-xl my-[18.5vh] w-[40vw] justify-center py-2">
-                    <div>
+            <div className="w-full h-screen mx-1 flex flex-col lg:flex-row justify-between">
+                <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col lg:flex-row h-4/5 bg-[#57AC49] rounded-xl my-1 lg:my-10 lg:w-2/5 justify-center py-2"
+                >
+                    <div className="flex flex-col justify-center items-center">
                         <div className="form-group files">
-                            <label>Upload Your File </label>
-                            <input type="file"
+                            <label>Upload Your File</label>
+                            <input
+                                type="file"
                                 onChange={handleFileChange}
                                 className="form-control"
-                                multiple />
+                                multiple
+                            />
                         </div>
-                        <div className='flex flex-col justify-center items-center'>
-                            {
-                                file && <img style={{ maxWidth: '200px' }} src={imgurl} alt={file.originalname} />
-                            }
+                        <div className="flex flex-col justify-center items-center">
+                            {file && (
+                                <img
+                                    style={{ maxWidth: '200px' }}
+                                    src={imgurl}
+                                    alt={file.originalname}
+                                />
+                            )}
 
-
-                            <button disabled={!file}
-                                className="px-4 py-3  border-2 bg-[#ffffff] w-[20vw]  text-black rounded-xl text-lg font-bold font-ss disabled:opacity-50 h-[8vh] mt-2 "
-                            >Check Disease</button>
+                            <button
+                                disabled={!file}
+                                className="px-4 py-3 border-2 bg-[#ffffff] w-72 lg:w-1/2 text-black rounded-xl text-lg font-bold font-ss disabled:opacity-50 h-20 mt-2"
+                            >
+                                Check Disease
+                            </button>
                         </div>
                     </div>
-
-                </form >
-                <div className='flex flex-col justify-center items-center w-[50vw] pr-10 mt-[17vh]'>
-                    {
-                        disease &&
-                        <p className='text-2xl font-bold font-ss'>{disease.prediction}</p>
-                    }
-                    <p className='text-2xl font-bold font-ss pt-2'>Causes</p>
-                    <div className='flex flex-col items-start'>
-
-
-
+                </form>
+                <div className="flex flex-col justify-center items-center lg:w-3/5 pr-10 mt-10 lg:mt-0">
+                    {disease && (
+                        <p className="text-2xl font-bold font-ss">{disease.prediction}</p>
+                    )}
+                    <p className="text-2xl font-bold font-ss pt-2">Causes</p>
+                    <div className="flex flex-col items-start">
                         {disease &&
-
                             Object.keys(causes).map((key, index) => (
-                                <div className='flex text-left py-2'>
-
-                                    <p className='text-lg font-bold font-ss pr-1'>{key}.</p>
-                                    <p className='text-lg font-ss'>{causes[key]}</p>
-
+                                <div className="flex text-left py-2" key={index}>
+                                    <p className="text-lg font-bold font-ss pr-1">{key}.</p>
+                                    <p className="text-lg font-ss">{causes[key]}</p>
                                 </div>
-                            ))
-                        }
+                            ))}
                     </div>
-                    <p className='text-2xl font-bold font-ss pt-2'>Preventions</p>
-                    <div className='flex flex-col items-start'>
-
-                        {
-                            disease &&
+                    <p className="text-2xl font-bold font-ss pt-2">Preventions</p>
+                    <div className="flex flex-col items-start">
+                        {disease &&
                             Object.keys(prevent).map((key, index) => (
-                                <div className='flex text-left justify-center py-2'>
-
-                                    <p className='text-lg font-bold font-ss pr-1'>{key}.</p>
-                                    <p className='text-lg font-ss'>{prevent[key]}</p>
+                                <div className="flex text-left justify-center py-2" key={index}>
+                                    <p className="text-lg font-bold font-ss pr-1">{key}.</p>
+                                    <p className="text-lg font-ss">{prevent[key]}</p>
                                 </div>
-                            ))
-                        }
+                            ))}
                     </div>
-
-
-
                 </div>
-            </div >
+            </div>
         </div>
-    );
+    )
 }
 
 
